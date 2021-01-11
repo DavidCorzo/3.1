@@ -1,0 +1,6 @@
+*.toc
+*.out
+*.syntex
+*.syntex.gz
+*.fls
+*.fdb_latexmk
