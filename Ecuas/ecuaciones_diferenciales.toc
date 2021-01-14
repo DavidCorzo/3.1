@@ -15,3 +15,12 @@
 \contentsline {subsection}{\numberline {1.1.11}Ejemplo}{6}{subsection.1.1.11}%
 \contentsline {subsection}{\numberline {1.1.12}Hay una correlación directa entre el orden de la ED y el número de constantes arbitrarias que resultan de la integración}{6}{subsection.1.1.12}%
 \contentsline {subsection}{\numberline {1.1.13}Resolver el siguiente ejercicio}{7}{subsection.1.1.13}%
+\contentsline {chapter}{\numberline {2}Problemas de valor inicial}{8}{chapter.2}%
+\contentsline {subsection}{\numberline {2.0.1}Problema de valor inicial (PVI) de primer orden}{8}{subsection.2.0.1}%
+\contentsline {subsection}{\numberline {2.0.2}PVI de 2do grado}{8}{subsection.2.0.2}%
+\contentsline {subsection}{\numberline {2.0.3}Ejercicio 1: Encuentre la solución particular de las sigs EDs.}{8}{subsection.2.0.3}%
+\contentsline {subsection}{\numberline {2.0.4}Resolución de una ED}{9}{subsection.2.0.4}%
+\contentsline {subsection}{\numberline {2.0.5}¿Cuándo un PVI tiene garantizada solución única?}{9}{subsection.2.0.5}%
+\contentsline {subsection}{\numberline {2.0.6}Ejercicios}{9}{subsection.2.0.6}%
+\contentsline {subsection}{\numberline {2.0.7}ED separable de primer orden}{11}{subsection.2.0.7}%
+\contentsline {subsection}{\numberline {2.0.8}Ejercicio 3}{11}{subsection.2.0.8}%
