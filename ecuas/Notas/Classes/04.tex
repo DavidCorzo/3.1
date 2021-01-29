@@ -1,0 +1,117 @@
+\section{ED lineales}
+\begin{itemize}
+    \item ED lineal 2do orden: 
+        \[
+          A(X)y''+B(x)y'+C(x)y=D(x)
+        \]
+    
+    \item ED lineal 1er orden:
+        \[
+          A(x)y'+B(x)y=C(x)
+        \]
+    
+    \item En general no es separable $\displaystyle C(x) -B(x)y$.
+    \item Divida la ED lineal por $\displaystyle A(x)$ para obtener su forma estándar.
+        \[
+          y'+P(x)y=Q(x)\qq, P=\frac{B}{A}\qq, Q=\frac{C}{A}
+        \]
+\end{itemize}
+
+
+\subsection{Resolución de una ED lineal}
+\begin{center}
+    \begin{align*}
+        Q(x)=0 \qq \text{ Resuelva } \qq \frac{d y}{d x} = P(x)y \qq \text{ separable. } \\ 
+        \int \frac{d y}{y} = \int P(x)dx \qimplies \ln\p{ y } =\int P(x)dx \qimplies y=e^{\int P(x)dx} \\ 
+        y' = e^{\int P(x)dx} \cdot P(x) \qq \text{ Usar el teorema fundamental del cálculo: } \qq \frac{d }{d x} \int P dx = \int P(x) dx =P \\ 
+    \end{align*}
+\end{center}
+\begin{enumerate}
+    \item Factor de integración $\displaystyle v=e^{\int P(x)dx}$ 
+    \item Multiplique la ED por el factor de integración:
+        \[
+            y'e^{\int P dx} + y P(x) e^{\int P dx} = Q(x)e^{\int P(x)dx}
+        \]
+        \begin{itemize}
+            \item Recordar regla del producto $\displaystyle u\cdot v = u'v + uv'$.
+        \end{itemize}
+        \begin{center}
+            \begin{align*}
+                \p{ye^{\int P(x)dx}}' = y'e^{\int P dx}  + yP(x)e^{\int P dx} \\ 
+            \end{align*}
+        \end{center}
+    
+    \item Use la regla del producto en ``reversa'':
+        \begin{center}
+           \begin{align*}
+               \frac{d }{d x} \p{ye^{\int P sx}} = Q(x)e^{\int P dx} \\ 
+           \end{align*}
+        \end{center}
+    
+    \item Integre ambos lados de la ec:
+        \begin{center}
+           \begin{align*}
+               y e^{\int P dx} = \int Q(x)e^{\int Pdx} + C \\ 
+           \end{align*}
+        \end{center}
+    
+    \item Resuelva para $y$:
+        \[
+          y = e^{-\int Pdx}\int Q(x)e^{\int Pdx}dx + ce^{-\int Pdx} 
+        \]
+\end{enumerate}
+
+\subsection{Pasos ED lineal}
+\begin{itemize}
+    \item Verifique que la ED es lineal.
+    \item Escriba la ED en su forma estándar.
+    \item Factor de integración $\displaystyle e^{\int P(x)dx}$.
+    \item Multiplique la ecuación diferencial $\times$ factor de integración.
+    \item Utilice la regla del producto.
+    \item Integre la ED y resuelva para $y$.
+\end{itemize}
+
+
+\subsection{Ejercicios}
+\begin{enumerate}
+    \item $\displaystyle y'+2xy=4x$  es lineal y es estándar.
+        \begin{center}
+           \begin{align*}
+               \text{ Factor de integración: } &\qq e^{\int Pdx} = e^{\int 2xdx} = e^{x^2} \qq \text{ Agregaremos C al final } \\
+               \text{ Multiplique la ED por el FI: } &\qq y'\p{e^{x^2}}  + y\p{2xe^{x^2}}  = 4xe^{x^2} \\ 
+               \text{ Utilice la regla del producto en reversa: } &\qq \p{ye^{x^2}}' = 4xe^{x^2} \\ 
+               \text{ Integre ambos lados respect a $x$: } &\qq \int\p{ye^{x^2}}'dx = \int 4xe^{x^2} dx \qimplies 2e^{x^2}+C \\ 
+               &\qq u = x^2, \qq du = 2xdx \qimplies \int 2e^udu=2e^u \\ 
+               \text{ Resuelva para $y$: } \qq y = \frac{2e^{x^2}+C}{e^{x^2}} = 2+Ce^{-x^2} \\ \text{ También es separable } \qq y'=4x-2xy=2x(2-y) \\ 
+                \int \frac{dy}{2-y}=\int 2x dx \qimplies -\ln\p{ 2-y } =x^2-C \\ 2-y=e^{-x^2-c} \qimplies 2-e^{-x^2-c} = y \qimplies c_1 = -e^{-c} \\ 
+           \end{align*}
+        \end{center}
+    
+    \item $\displaystyle 2\p{y-4x^2} dx+xdy=0$ no es separable.
+        \begin{center}
+           \begin{align*}
+               \text{ Rescriba la ED } &\qq 2y-8x^2+x \frac{d y}{d x} = 0 \\ 
+               &\qq xy'+2y=8x^2 \qq \text{ ED lineal } \qq e^{2x} \\ 
+               y'+\frac{2}{x}y  =8x \qq \text{ ED lineal estándar } \\ 
+               \text{ FI }&\qq \int Pdx=\int \frac{2}{x}dx  = 2\ln\p{ x } \\ 
+               &\qq 2x \neq e^{\int Pdx}  = e^{2\ln\p{ x } }= e^{\ln\p{ x^2 }  } = x^2 \\ 
+               \text{ Multiplique por el FI } &\qq x^2y'+2xy=8x^3 \\ 
+               &\qq \p{x^2y}' = 8x^3 \\ 
+               \text{ Integre: } &\qq x^2y=\int 8x^3 dx \qimplies x^2y = 2x^4+C \\ 
+               \text{ Sol general: } &\qq y = \frac{2x^4+C}{x^2} \qimplies 2x^2+Cx^{-2} \\ 
+           \end{align*}
+        \end{center}
+    
+    \item $\displaystyle \p{\cos\p{x} +2y\cos\p{ x } } dx -\sin\p{ dy } =0$ 
+        \begin{center}
+           \begin{align*}
+               \p{\cos\p{ x } + 2y\cos\p{ x } } -\sin\p{ x } \frac{d y}{d x} =0 \\ 
+               \cos\p{ x } = \sin\p{ x } \frac{d x}{d y} -2y\cos\p{ x } qq \text{ ED lineal } \\ 
+               \frac{d y}{d x} -2\frac{\cos\p{x}}{\sin\p{ x } }y  = \frac{\cos\p{ x } }{\cos\p{ x } } \qq \text{ Forma estándar } \\ 
+               \text{ FI } \qq -2\int \frac{\cos\p{ x } }{\sin\p{ x } }dx = \qq  \underbrace{-2\int \frac{du}{u} = }_{u=\sin\p{ x }, du=\cos\p{ x } dx} = -2\ln\p{ \sin\p{ x }  } \\ 
+               \qq e^{\int P dx} = e^{-2\ln\p{ \sin\p{ x }  } } = e^{\ln\p{ \sin^{-2}\p{ x }  }  } \\ 
+               \text{ Multiplique por el FI } \qq \frac{\sin^{-2}\p{ x }y' }{f_1} -2\frac{\cos(x)}{\sin^{3}(x)} \qimplies \int u^{-3}du = \frac{u^-2}{-2}+C \\ 
+               \frac{y}{\sin^{2}(x)} = \int \sin^{-3}\p{ x } \cos\p{ x } dx  = -\frac{1}{2}\sin^{-2}\p{ x } +C \qimplies y = -0.5+C\sin^2(x) \\ 
+           \end{align*}
+        \end{center}
+\end{enumerate}

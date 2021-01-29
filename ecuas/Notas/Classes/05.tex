@@ -1,0 +1,87 @@
+\section{ED exactas}
+\begin{itemize}
+    \item Una ED de 1er orden que es $\displaystyle \frac{d y}{d x} = \frac{M(x,y)}{N(x,y)}$ (usualmente escritas en términos de sus diferenciales) se puede escribir en términos de sus diferenciales: $\displaystyle Mdx = Ndy \qimplies M(x,y)dx-N(x,y)dy = 0$.
+    \item La ED exacta no siempre es separable o lineal.
+    \item ED exactas: 
+        \[
+            \frac{\partial M}{\partial y} = \frac{\partial N}{\partial x} \\ 
+        \]
+    
+    \item Solución de una ED exacta: Si la ED 1er orden $\displaystyle Mdx - Ndy = 0$ es exacta, entonces la solución de la ED satisface las siguientes ecuaciones:
+        \[
+          \frac{\partial F}{\partial x}  = M \qq \frac{\partial f}{\partial y} = N
+        \]
+        \begin{itemize}
+            \item Solución general: la función implícita $F(x,y)=c$.
+        \end{itemize}
+    
+    \item Pasos para resolver:
+        \begin{itemize}
+            \item Derivar de manera cruzada: ED exacta:
+                \[
+                  M_y = N_x
+                \]
+            
+            \item Integre respecto a $x$:
+                \[
+                  F_x = M(x,y)
+                \]
+                \begin{itemize}
+                    \item La constante depende de $y$.
+                    \item Inicialmente uno tendrá una solución como $\displaystyle F+A(y)$ 
+                \end{itemize}
+            
+            \item Derive $F$ respecto a $y$: $\displaystyle F_y+A'(y)=N$ 
+                \begin{itemize}
+                    \item Simplifique e integre $A'(y)$.
+                \end{itemize}
+            
+            \item Solución general $\displaystyle F(x,y)=c$.
+        \end{itemize}
+\end{itemize}
+
+\subsection{Ejercicio}
+Resuelva las EDs.
+\begin{enumerate}
+    \item $\displaystyle \p{3x^2y-6x}dx + \p{x^3+2y}dy = 0$ 
+        \begin{center}
+           \begin{align*}
+                \underbrace{\p{3x^2y-6x}}_{M}dx + \underbrace{\p{x^3+2y}}_{N}dy = 0 \\ 
+                \frac{\partial M}{\partial y} = 3y^2 \qq \frac{\partial N}{\partial x} = 3x^2 \qq M_y = N_x \; \text{ Ed exacta }\\ 
+                \text{ La ED satisface las condiciones   } \\ 
+                \frac{\partial F}{\partial x} = 3x^2y-6x \qq \frac{\partial f}{\partial y} = x^3+2y \\ 
+                \text{ Integre $F_x$: }\; F(x,y) = x^3y-3x^2+C(y) \\ 
+                \text{ Derive $F$ respecto  $y$: } \; \frac{\partial F}{\partial y} = x^3+C'(y)=x^3+2y \\ 
+                \text{ Simplifique e integre: }\; C'(y)=2y \qq C(y)=y^2 \\ 
+                \text{ Solución general: }\; F=C \qq x^3y-3x^2+y^2=C \\                 
+           \end{align*}
+           \hlinefill
+            \begin{align*}
+            \text{ Puede empezar integrando la 2da ec: } \\ 
+            F(x,y) = x^3y+y^2+A(x) \\ 
+            F_x = 3x^2y+A'(x)=3x^2y-6x \\ 
+            A'(x)=-6x \qimplies A(x = -3x^2) \\ 
+            \text{ Misma solución general: }\; x^3y-3x^2+y^2=c \\ 
+            \end{align*}
+        \end{center}
+    
+    \item $\displaystyle (2x^3-xy^2-2y+3)dx-(x^2y+2x+2y)dy=0$
+        \begin{center}
+           \begin{align*}
+               M_y = -2xy-2 \qq N_x = -2xy-2) \qq \text{ (es exacta) } \\ 
+               F_x = 2x^3-xy^2-2y+3 \qq F_y=-x^2y-2x-2y \\ 
+               \text{ Integre: }\; F=\frac{2}{4}x^4-\frac{1}{2}x^2y^2-2yx+3x +A(y) \\ 
+                \text{ Derive: }\; F_y = -x^2y-2x+A'(y)=\cancel{-x^2y}-\cancel{2x}-2y \\ 
+                \text{ Integre: }\; A'(y) = -2y \qimplies A(y)=-y^2 \\ 
+                \text{ Soln. General: }\; \frac{1}{2}x^4 -\frac{1}{2}x^2y^2-2yx+3x-y^2=c \\ 
+           \end{align*}
+        \end{center}
+    
+    \item $\displaystyle (\cos\p{ x } \sin\p{ y } -\cot\p{ x } )dx - (\sec\p{ y } -\sin\p{ x } \sin\p{ y } )dy=0$ 
+        % \begin{center}
+        %    \begin{align*}
+        %        M_y = -\cos{x} \sin\p{ y } 
+        %    \end{align*}
+        % \end{center}
+\end{enumerate}
+
