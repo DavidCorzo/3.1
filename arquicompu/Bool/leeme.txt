@@ -1,0 +1,35 @@
+
+ /---------------------------------------------------------------------------\ 
+ |                                                                           |
+ |                              BOOLE-DEUSTO                                 |
+ |                     Entorno de Análisis y Diseño de                       |
+ |                           Sistemas Digitales                              |
+ |                                                                           |
+ |                    INSTRUCCIONES DE USO DEL CD-ROM                        |
+ |                                                                           |
+ |    © Javier García Zubía, Jesús Sanz Martinez, Borja Sotomayor Basilio    |
+ \---------------------------------------------------------------------------/
+ 
+ 
+	El BOOLE-DEUSTO se ofrece en español, inglés y vasco. Para utilizar la
+	versión española basta con poner en un directorio los ficheros boole.exe
+	y reductio.exe, el original está en español por defecto.
+	Para obtener la versión inglesa basta con añadir al directorio con 
+	boole.exe y reductio.exe los ficheros boole.enu y reductio.enu, ambos
+	ficheros contienen las traducciones al inglés. Lo mismo se ha de hacer
+	con el fichero boole.euq para el idioma vasco.
+	Es importante saber que si todos los ficheros se ponen juntos, el boole
+	se ejecuta en inglés, ya que encuentra por defecto el .enu.
+	
+	Si se desea recibir nuevas versiones del BOOLE por favor regístrese en:
+	zubia@eside.deusto.es y díganos:
+	
+	NOMBRE y APELLIDOS:
+	e-mail:
+	PROFESOR, ALUMNO U OTROS:
+	UNIVERSIDAD, CENTRO DE ENSEÑANZA o EMPRESA:
+	FACULTAD O ESPECIALIDAD:
+	OTROS COMENTARIOS:
+	
+	
+

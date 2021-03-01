@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE gretldata SYSTEM "gretldata.dtd">
+
+<gretldata version="1.4" name="BD Problema 2 primer parcial" frequency="1" startobs="1" endobs="23" type="cross-section">
+<description>Datos importados desde el fichero Excel 'BD Primer Parcial 2020.xlsx', 2020-02-13 06:50
+</description>
+<variables count="5">
+<variable name="Y"
+/>
+<variable name="X1"
+/>
+<variable name="X2"
+/>
+<variable name="X3"
+/>
+<variable name="X4"
+/>
+</variables>
+<observations count="23" labels="false">
+<obs>27.8 397.5 42.2 50.7 78.3 </obs>
+<obs>29.9 413.3 38.1 52 79.2 </obs>
+<obs>29.8 439.2 40.3 54 79.2 </obs>
+<obs>30.8 459.7 39.5 55.3 79.2 </obs>
+<obs>31.2 492.9 37.3 54.7 77.4 </obs>
+<obs>33.3 528.6 38.1 63.7 80.2 </obs>
+<obs>35.6 560.3 39.3 69.8 80.4 </obs>
+<obs>36.4 624.6 37.8 65.9 83.9 </obs>
+<obs>36.7 666.4 38.4 64.5 85.5 </obs>
+<obs>38.4 717.8 40.1 70 93.7 </obs>
+<obs>40.4 768.2 38.6 73.2 106.1 </obs>
+<obs>40.3 843.3 39.8 67.8 104.8 </obs>
+<obs>41.8 911.6 39.7 79.1 114 </obs>
+<obs>40.4 931.1 52.1 95.4 124.1 </obs>
+<obs>40.7 1021.5 48.9 94.2 127.6 </obs>
+<obs>40.1 1165.9 58.3 123.5 142.9 </obs>
+<obs>42.7 1349.6 57.9 129.9 143.6 </obs>
+<obs>44.1 1449.4 56.5 117.6 139.2 </obs>
+<obs>46.7 1575.5 63.7 130.9 165.5 </obs>
+<obs>50.6 1759.1 61.6 129.8 203.3 </obs>
+<obs>50.1 1994.2 58.9 128 219.6 </obs>
+<obs>51.7 2258.1 66.4 141 221.6 </obs>
+<obs>52.9 2478.7 70.4 168.2 232.6 </obs>
+</observations>
+</gretldata>
