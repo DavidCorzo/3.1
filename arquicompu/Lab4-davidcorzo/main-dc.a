@@ -1,0 +1,135 @@
+.data
+    text:  .asciiz "Enter a number: "
+    remainder: .space 4
+    p: .asciiz "number is prime."
+    np: .asciiz "number is not prime"
+    s: .asciiz " "
+    ss: .asciiz " \n"
+    t: .asciiz "\nthen excecuted\n"
+    pe: .asciiz "prime statement excecuted\n"
+    npe: .asciiz "not prime statement excecuted\n"
+    t_0_str: .asciiz "$t0: "
+    t_1_str: .asciiz "$t1: "
+    t_2_str: .asciiz "$t2: "
+    t_3_str: .asciiz "$t3: "
+    t_4_str: .asciiz "$t4: "
+
+.text
+
+ main:
+    # Printing out the text
+    li $v0, 4
+    la $a0, text
+    syscall
+
+    # Getting user input
+    li $v0, 5
+    syscall
+
+    # Moving the integer input to another register
+    move $t0, $v0
+
+    # for (int i = 2; i < input_int; i++) 
+    #     if ( input_int % i  == 0) { 
+    #       no es primo. break; 
+    #   }
+    # $t0 = input_int 
+    # $t1 = counter 
+    # $t2 = bool is_prime
+    # $t3 = remainder
+    li $t1, 2 # counter = 2
+    li $t2, 1 # is prime = true
+    
+
+    jal is_prime # calling loop.
+    jal result
+    # End Program
+    li $v0, 10
+    syscall
+
+is_prime:
+    bge $t1, $t0, exit # counter < input_int
+    rem $t3, $t0, $t1
+    beqz $t3, not_prime
+    addi $t1, $t1, 1
+    j is_prime
+
+not_prime:
+    addi $t2, $t2, -1
+    j exit
+
+exit:
+    
+result:
+    # print("t_0: ")
+    li $v0, 4
+    la $a0, t_0_str
+    syscall 
+    # print($t0)
+    li $v0, 1
+    move $a0, $t0
+    syscall
+    # print("\n")
+    li $v0, 4
+    la $a0, ss
+    syscall 
+
+    # print(t_1)
+    li $v0, 4
+    la $a0, t_1_str
+    syscall
+    # print($t1)
+    li $v0, 1
+    move $a0, $t1
+    syscall
+    # print("\n")
+    li $v0, 4
+    la $a0, ss
+    syscall 
+
+    # print(t_2)
+    li $v0, 4
+    la $a0, t_2_str
+    syscall 
+    # print($t2)
+    li $v0, 1
+    move $a0, $t2
+    syscall
+    # print("\n")
+    li $v0, 4
+    la $a0, ss
+    syscall 
+    
+    # print(t_3)
+    li $v0, 4
+    la $a0, t_3_str
+    syscall 
+    # print($t3)
+    li $v0, 1
+    move $a0, $t3
+    syscall
+    # print("\n")
+    li $v0, 4
+    la $a0, ss
+    syscall 
+    
+    # print(t_4)
+    li $v0, 4
+    la $a0, t_4_str
+    syscall 
+    # print($t4)
+    li $v0, 1
+    move $a0, $t4
+    syscall
+    # print("\n")
+    li $v0, 4
+    la $a0, ss
+    syscall
+    jr $ra
+    
+    
+    
+    
+    
+
+

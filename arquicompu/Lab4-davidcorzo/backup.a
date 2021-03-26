@@ -1,0 +1,124 @@
+.data
+    text:  .asciiz "Enter a number: "
+    remainder: .space 4
+    is_prime: .space 1
+    p: .asciiz "number is prime."
+    np: .asciiz "number is not prime"
+    s: .asciiz " "
+    ss: .asciiz " \n"
+    t: .asciiz "\nthen excecuted\n"
+    pe: .asciiz "prime statement excecuted\n"
+    npe: .asciiz "not prime statement excecuted\n"
+
+.text
+
+ main:
+    # Printing out the text
+    li $v0, 4
+    la $a0, text
+    syscall
+
+    # Getting user input
+    li $v0, 5
+    syscall
+
+    # Moving the integer input to another register
+    move $t0, $v0
+
+    # for (int i = 2; i < input_int; i++) 
+    #     if ( input_int % i  == 0) { 
+    #       no es primo. break; 
+    #   }
+    # $t0 = input_int 
+    # $t1 = counter 
+    # $t2 = bool is_prime
+    # $t3 = remainder
+    li $t1, 2 # counter = 2
+    li $t2, 1 # is prime = true
+
+    jal loop # calling loop.
+
+
+loop:
+    blt $t0, $t1, end # if (counter < input_int) break;
+    rem $t3, $t0, $t1 # $t3 = input_int % counter.
+
+    # print(counter)
+    li $v0, 1
+    move $a0, $t1
+    syscall
+
+    # print(" ")
+    li $v0, 4
+    la $a0, s
+    syscall
+
+    # print(counter)
+    li $v0, 1
+    move $a0, $t3
+    syscall
+
+    # print(" ")
+    li $v0, 4
+    la $a0, s
+    syscall
+
+    # print("is_prime")
+    li $v0, 1
+    move $a0, $t2
+    syscall
+
+    # print("\n")
+    li $v0, 4
+    la $a0, ss
+    syscall
+    
+    beqz $t3, then # if ( remainder == 0 ) then it is not prime.
+    
+    addi $t1, $t1, 1 # counter++
+    j loop # repeat
+
+then:
+    li $t2, 0 # is_prime = false
+    # print(is_prime)
+    li $v0, 1 
+    move $a0, $t2
+    syscall
+    # print(then excecuted)
+    li $v0, 4 
+    la $a0, t 
+    syscall
+    j end # jump to end
+end:
+    beqz $t2, not_prime
+    bnez $t2, prime
+prime:  
+    # print("prime statement excecuted")
+    li $v0, 4
+    la $a0, pe
+    syscall
+    # Printing out the text
+    li $v0, 4
+    la $a0, p
+    syscall
+    j terminate
+not_prime: 
+    # print("not prime statement excecuted")
+    li $v0, 4
+    la $a0, npe
+    syscall
+    # Printing out the text
+    li $v0, 4
+    la $a0, np
+    syscall
+    j terminate
+
+terminate:
+    # Printing out the number
+    li $v0, 1
+    move $a0, $t0
+    syscall
+
+    # End Program
+    li $v0, 10
+    syscall

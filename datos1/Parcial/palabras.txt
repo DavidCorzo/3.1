@@ -1,0 +1,25 @@
+(12) Describa esta arquitectura, sus componentes, como se conecta a cada componente.
+(08) Explique el concepto de independencia de datos.
+(24) Explique los tipos de privilegios que existen en un manejador de base de datos Oracle, las formas de otorgar y heredar los privilegios.
+(31) ¿Cuáles son las debilidades de utilizar un enfoque de archivos convencionales para manejar un sistema de base de datos, y cuales son las ventajas de un enfoque utilizando un DBMS? 
+(23) Describa la arquitectura de un manejador de base de datos relacional.  Detalle componentes físicos, tipos de archivos, estructuras de memoria, entre otros.  
+(23) Describa los roles o personal, que están relacionados con la base de datos.  Explique por lo menos 3 roles, con sus responsabilidades. 
+(12) ¿Cuál es la diferencia entre datos, información, conocimiento? Ponga un ejemplo.
+(48) Respecto a un objeto tipo índice en una base de datos: a.	¿Es posible crear un índice con más de un campo? b.	Que puede provocar que un índice este desbalanceado, y como puede evitarse?  c.	¿Qué diferencia hay entre un Branch node y un leaf node?
+(15) Asociar o unir con una flecha, los componentes teóricos y prácticos de un DBMS. 
+(27) Represente en un diagrama entidad relación, los componentes del nivel interno del DBMS Oracle, desde base de datos, a la unidad más pequeña de almacenamiento físico.  
+(16) ¿Cuáles son los datos necesarios para establecer una conexión a una base de datos Oracle? 
+(17) ¿Cuál es la diferencia entre un usuario y un esquema de base de datos en Oracle? 
+(20) ¿Qué recomendaciones se dan para mantener la seguridad de los usuarios de base de datos?  Expliqué brevemente cada recomendación. 
+(23) Describa las opciones o componentes de la base de datos Oracle que permiten implementar las recomendaciones de seguridad a nivel de usuarios.
+(11) ¿Qué diferencia hay entre una Base relation y un snapshot?
+(15) Explique que es un dominio de información para un atributo.  Escriba 2 ejemplos (Atributo/dominio).
+(12) Describa los pasos para la creación de un sistema de datos relacional. 
+(11) Cual es la diferencia entre una relación 1:M vs M:1 
+(09) ¿Qué es y porqué es importante la normalización?
+(12) Explique en sus palabras, las 3 formas normales vistas en clase. 
+(13) Explique las opciones disponibles, al eliminar registros referenciados desde una llave extranjera. 
+(25) ¿Como se representa y resuelve una relación M:M en un sistema relacional?  Escriba un ejemplo, sin usar los casos vistos en clase (estudiantes, ordenes). 
+(12) ¿Qué diferencia hay entre una Base relation y una Logical view?
+(07) Explique las reglas de integridad referencial. 
+(28) Explique los niveles externo, conceptual e interno en la base de datos, y a que componentes los asocia en un manejador de base de datos que conozca.
